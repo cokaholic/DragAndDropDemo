@@ -1,26 +1,119 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Helvetica.ttc">
+            <string>Helvetica-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DragAndDropDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="base_profile" translatesAutoresizingMaskIntoConstraints="NO" id="Clf-oo-Jtc">
+                                <rect key="frame" x="134" y="50" width="500" height="500"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="500" id="OrE-ai-TKC"/>
+                                    <constraint firstAttribute="width" constant="500" id="Oxy-IQ-HWd"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="enQ-as-J57">
+                                <rect key="frame" x="347" y="50" width="90" height="74"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="90C-cz-8dJ"/>
+                                    <constraint firstAttribute="height" constant="74" id="EIq-pX-rGY"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BVg-8w-6zV">
+                                <rect key="frame" x="355" y="63" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="BWv-y2-nHR"/>
+                                    <constraint firstAttribute="height" constant="70" id="PyJ-15-0vb"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3xC-ae-zMF">
+                                <rect key="frame" x="474" y="200" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="7Ny-8T-CR0"/>
+                                    <constraint firstAttribute="height" constant="120" id="ujh-6Y-xLV"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="afro_hair" translatesAutoresizingMaskIntoConstraints="NO" id="LdJ-dx-Hpc">
+                                <rect key="frame" x="129" y="580" width="150" height="124"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="59L-Nr-kcV"/>
+                                    <constraint firstAttribute="height" constant="124" id="CPY-gb-yjp"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mask" translatesAutoresizingMaskIntoConstraints="NO" id="ldN-Lc-9ec">
+                                <rect key="frame" x="309" y="567" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="a3d-v4-pKo"/>
+                                    <constraint firstAttribute="height" constant="150" id="dym-uX-oSj"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remove Here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b7V-gF-7mH">
+                                <rect key="frame" x="489" y="567.5" width="200" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="fIW-1w-hO0"/>
+                                    <constraint firstAttribute="width" constant="200" id="gj3-hU-uKZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="27"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="enQ-as-J57" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="45d-I9-Ntt"/>
+                            <constraint firstItem="Clf-oo-Jtc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="9uD-qL-7cH"/>
+                            <constraint firstItem="BVg-8w-6zV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="6" id="AtJ-Lx-fle"/>
+                            <constraint firstItem="b7V-gF-7mH" firstAttribute="leading" secondItem="ldN-Lc-9ec" secondAttribute="trailing" constant="30" id="BAJ-CB-zPh"/>
+                            <constraint firstItem="b7V-gF-7mH" firstAttribute="centerY" secondItem="ldN-Lc-9ec" secondAttribute="centerY" id="QY8-EM-klF"/>
+                            <constraint firstItem="enQ-as-J57" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="8" id="VBA-q3-gmQ"/>
+                            <constraint firstItem="3xC-ae-zMF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="150" id="Y4k-7R-Xzp"/>
+                            <constraint firstItem="BVg-8w-6zV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="43" id="YC6-fV-Qpv"/>
+                            <constraint firstItem="ldN-Lc-9ec" firstAttribute="centerY" secondItem="LdJ-dx-Hpc" secondAttribute="centerY" id="jIo-OW-iPV"/>
+                            <constraint firstItem="3xC-ae-zMF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="180" id="jPv-5D-SCR"/>
+                            <constraint firstItem="ldN-Lc-9ec" firstAttribute="leading" secondItem="LdJ-dx-Hpc" secondAttribute="trailing" constant="30" id="lSE-Bf-6EJ"/>
+                            <constraint firstItem="ldN-Lc-9ec" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mcU-Hm-Kwh"/>
+                            <constraint firstItem="LdJ-dx-Hpc" firstAttribute="top" secondItem="Clf-oo-Jtc" secondAttribute="bottom" constant="30" id="qA0-81-HGw"/>
+                            <constraint firstItem="Clf-oo-Jtc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vD3-p5-P2D"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="afroContainerImageView" destination="enQ-as-J57" id="mSa-w2-0wd"/>
+                        <outlet property="afroHairImageView" destination="LdJ-dx-Hpc" id="j2X-cQ-oet"/>
+                        <outlet property="baseProfileImageView" destination="Clf-oo-Jtc" id="gFk-5M-5sg"/>
+                        <outlet property="extraContainerImageView" destination="3xC-ae-zMF" id="EnN-cS-bsr"/>
+                        <outlet property="maskContainerImageView" destination="BVg-8w-6zV" id="ari-gp-egY"/>
+                        <outlet property="maskImageView" destination="ldN-Lc-9ec" id="zKn-K9-qVl"/>
+                        <outlet property="removeAreaLabel" destination="b7V-gF-7mH" id="BlQ-rn-uhS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.5" y="138.8671875"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="afro_hair" width="425" height="350"/>
+        <image name="base_profile" width="480" height="480"/>
+        <image name="mask" width="500" height="500"/>
+    </resources>
 </document>

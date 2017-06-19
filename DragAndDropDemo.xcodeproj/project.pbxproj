@@ -14,6 +14,8 @@
 		FF43C7631EF637BF009138CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF43C7611EF637BF009138CA /* LaunchScreen.storyboard */; };
 		FF43C76E1EF637BF009138CA /* DragAndDropDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF43C76D1EF637BF009138CA /* DragAndDropDemoTests.swift */; };
 		FF43C7791EF637BF009138CA /* DragAndDropDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF43C7781EF637BF009138CA /* DragAndDropDemoUITests.swift */; };
+		FF43C7881EF64456009138CA /* ViewController+Drag.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF43C7871EF64456009138CA /* ViewController+Drag.swift */; };
+		FF97071B1EF6482A0024365D /* ViewController+Drop.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF97071A1EF6482A0024365D /* ViewController+Drop.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		FF43C7741EF637BF009138CA /* DragAndDropDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DragAndDropDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF43C7781EF637BF009138CA /* DragAndDropDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragAndDropDemoUITests.swift; sourceTree = "<group>"; };
 		FF43C77A1EF637BF009138CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF43C7871EF64456009138CA /* ViewController+Drag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Drag.swift"; sourceTree = "<group>"; };
+		FF97071A1EF6482A0024365D /* ViewController+Drop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Drop.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +103,9 @@
 			children = (
 				FF43C7581EF637BF009138CA /* AppDelegate.swift */,
 				FF43C75A1EF637BF009138CA /* ViewController.swift */,
-				FF43C75C1EF637BF009138CA /* Main.storyboard */,
-				FF43C75F1EF637BF009138CA /* Assets.xcassets */,
-				FF43C7611EF637BF009138CA /* LaunchScreen.storyboard */,
-				FF43C7641EF637BF009138CA /* Info.plist */,
+				FF43C7871EF64456009138CA /* ViewController+Drag.swift */,
+				FF97071A1EF6482A0024365D /* ViewController+Drop.swift */,
+				FF43C7861EF638D2009138CA /* Resources */,
 			);
 			path = DragAndDropDemo;
 			sourceTree = "<group>";
@@ -123,6 +126,17 @@
 				FF43C77A1EF637BF009138CA /* Info.plist */,
 			);
 			path = DragAndDropDemoUITests;
+			sourceTree = "<group>";
+		};
+		FF43C7861EF638D2009138CA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FF43C75C1EF637BF009138CA /* Main.storyboard */,
+				FF43C75F1EF637BF009138CA /* Assets.xcassets */,
+				FF43C7611EF637BF009138CA /* LaunchScreen.storyboard */,
+				FF43C7641EF637BF009138CA /* Info.plist */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +271,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF43C75B1EF637BF009138CA /* ViewController.swift in Sources */,
+				FF43C7881EF64456009138CA /* ViewController+Drag.swift in Sources */,
 				FF43C7591EF637BF009138CA /* AppDelegate.swift in Sources */,
+				FF97071B1EF6482A0024365D /* ViewController+Drop.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,7 +441,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jp.cokaholic.DragAndDropDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -439,7 +455,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jp.cokaholic.DragAndDropDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
@@ -524,6 +540,7 @@
 				FF43C77F1EF637BF009138CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FF43C7801EF637BF009138CA /* Build configuration list for PBXNativeTarget "DragAndDropDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +549,7 @@
 				FF43C7821EF637BF009138CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FF43C7831EF637BF009138CA /* Build configuration list for PBXNativeTarget "DragAndDropDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -540,6 +558,7 @@
 				FF43C7851EF637BF009138CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
